@@ -1,0 +1,93 @@
+package inventorytester;
+
+public class Vehicle 
+{
+    //instance field (data), then constructors, then methods. Preferred order
+    private String vin;
+    private String description;
+    private int odometer;
+    private char unit;
+    
+    public Vehicle () // default constructor
+    {
+        vin = "";
+        description = "";
+        odometer = 0;
+        unit = ' ';
+    }
+    public Vehicle(String vin, String descr, int odo, char u)// constructor
+    {
+        setVIN(vin);
+        setDescription(descr);
+        setOdometer(odo);
+        setUnit(u);
+    }
+    
+    public void setVIN(String id)//don't give argument samename as instancefield
+    {
+        vin = id;
+    }
+    public void setDescription(String desc)
+    {
+        description = desc;
+    }
+    public void setOdometer(int value)
+    {
+        odometer = value;
+    }
+    public void setUnit(char unit)
+    {
+        this.unit = unit; /* this is a reference to the current object. use 
+                            if you want same name */
+    }
+    
+    
+    //get methods
+    
+    public String getVIN()
+    {
+        return vin;
+    }
+    public String getDescription()
+    {
+        return description;
+    }
+    public int getOdometer()
+    {
+        return odometer;
+    }
+    public char getUnit()
+    {
+        return unit;
+    }
+    
+    public String toString()
+    {
+        String temp = "VIN: " + vin + "\nDescription: " + description + 
+                "\nOdometer: " + odometer + " " + unit + "\n";
+        return temp;
+    }
+    
+    public int compareTo(Vehicle other)
+    {
+        double thisMiles = this.odometer;
+        double otherMiles = other.odometer;
+        if(this.unit == 'k')
+        {
+            thisMiles = this.odometer / 1.609;
+        }
+        if(other.unit == 'k')
+        {
+            otherMiles = other.odometer / 1.609;
+        }
+        if(Math.abs(thisMiles - otherMiles) < 0.00000001)
+        {
+            return 0;
+        }
+        if(thisMiles < otherMiles)
+        {
+            return -1;
+        }
+        return 1;
+    }
+}
