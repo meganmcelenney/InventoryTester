@@ -1,0 +1,109 @@
+package inventorytester;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+public class InventoryTester 
+{
+    public static void main(String[] args) 
+    {
+        Vehicle car1 = new Vehicle("135SDFUJNK", "GMC", 235466, 'k');
+        Vehicle car2 = new Vehicle("ABC12345", "Buick", 534565, 'm');
+        Vehicle car3 = new Vehicle("12OJ896T", "Cadillac", 875456, 'k');
+        Vehicle car4 = new Vehicle("1ESRD665", "Chevrolet", 296436, 'm');
+        Vehicle car5 = new Vehicle("1324GDS5", "GMC", 96643, 'k');
+        Vehicle car6 = new Vehicle("ASDFUI785", "Cadillac", 769845, 'k');
+        Vehicle car7 = new Vehicle("A67V7GU5", "Chevrolet", 534509, 'm');
+        Vehicle car8 = new Vehicle("AUISF8976", "GMC", 23874, 'k');
+        Vehicle car9 = new Vehicle("A456FGB8", "Cadillac", 674459, 'm');
+        Vehicle car10 = new Vehicle("TYF8754", "Buick", 5874565, 'm');
+        
+        ArrayList <Vehicle> inventory = new ArrayList<Vehicle>();
+        inventory.add(car1);
+        inventory.add(car2);
+        inventory.add(car3);
+        inventory.add(car4);
+        inventory.add(car5);
+        inventory.add(car6);
+        inventory.add(car7);
+        inventory.add(car8);
+        inventory.add(car9);
+        inventory.add(car10);
+
+        /*car1.setVIN("XYZ98765");
+        car1.setDescription("Suburban");
+        car1.setOdometer(257893);
+        car1.setUnit('k');
+        System.out.println("VIN: " + car1.getVIN() + "\nDescription: " + 
+                car1.getDescription());
+        if(car1.getUnit() == 'm')
+            System.out.println("Mileage: " + car1.getOdometer() + " miles");
+        else
+            System.out.println("Kilometerage: " + car1.getOdometer() + 
+                    " kilometers");
+        
+        System.out.println("\nVIN: " + car2.getVIN() + "\nDescription: " + 
+                car2.getDescription());
+        if(car2.getUnit() == 'm')
+            System.out.println("Mileage: " + car2.getOdometer() + " miles");
+        else
+            System.out.println("Kilometerage: " + car2.getOdometer() + 
+                    " kilometers");
+        
+        
+        ArrayList <Vehicle> inventory = new ArrayList<Vehicle>();
+        for(int i=0; i < 4; i++)
+        {
+            String tempVin = JOptionPane.showInputDialog("Enter VIN: ");
+            String tempDesc = JOptionPane.showInputDialog("Enter description: "
+                    + "");
+            int tempOdo = Integer.parseInt(JOptionPane.showInputDialog("Enter "
+                    + "odometer: "));
+            char tempUnit = (JOptionPane.showInputDialog("Enter "
+                    + "unit: ")).charAt(0);
+            Vehicle vehObj = new Vehicle(tempVin, tempDesc, tempOdo, tempUnit);
+            inventory.add(vehObj);        
+        }
+        //System.out.println("\n"inventory); */
+
+       /* for(Vehicle car: inventory)
+        {
+            System.out.println(car.toString());
+        } */
+        
+        for(Vehicle e : inventory)
+        {
+            System.out.println("VIN: " + e.getVIN() + "\nDescription: " + 
+                e.getDescription() + " " + "\nOdometer: " + e.getOdometer() + 
+                    " " + e.getUnit() + "\n");
+            /*if(car1.getUnit() == 'm')
+                System.out.println("Mileage: " + e.getOdometer() + " miles");
+            else
+            System.out.println("Kilometerage: " + e.getOdometer() + 
+                    " kilometers \n"); */
+        }
+        
+       /* if(car1.compareTo(car2) < 0)
+        {
+            System.out.println("Car 1 is less than car 2");
+        }
+        else if(car1.compareTo(car2) > 0)
+        {
+            System.out.println("Car 1 is greater than car 2");
+            
+        }
+        else
+        {
+            System.out.println("They are equal");
+        }
+        Vehicle largest = new Vehicle();
+        for(Vehicle e: inventory)
+        {
+            if(largest.compareTo(e) < 0)
+                largest = e;
+            System.out.println("The car with the highest mileage is " + 
+                    largest.toString());
+        } */
+       
+    }    
+}
